@@ -1,0 +1,227 @@
+.slider {
+    padding-top: 200px;
+    padding-bottom: 141px;
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__title {
+        font-family: 'Merriweather';
+        font-weight: 400;
+        font-size: 54px;
+        line-height: 64.8px;
+        text-transform: uppercase;
+        color: var(--dark_gray);
+    }
+    &__counter {
+        width: 150px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: 'Golos Text', sans-serif;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19.2px;
+        color: var(--dark_gray);
+        &-svg {
+            cursor: pointer;
+            circle {
+                transition: all 0.3s ease;
+            }
+            &:hover {
+                circle {
+                    fill: var(--yellow);
+                }
+            }
+            &:active {
+                circle {
+                    transition: all 0s ease;
+                    fill: var(--light--gray);
+                }
+            }
+        }
+    }
+    &__wrapper {
+        margin-top: 60px;
+        width: 100%;
+    }
+    &__block {
+        display: flex;
+        &-avatar {
+            width: 394px;
+            padding: 0 37px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        &-title {
+            margin-top: 28px;
+            font-family: 'Golos Text', sans-serif;
+            font-weight: 600;
+            font-size: 24px;
+            line-height: 28.8px;
+            color: var(--dark_gray);
+        }
+        &-subtitle {
+            margin-top: 6px;
+            font-family: 'Golos Text', sans-serif;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 24px;
+            color: var(--dark_gray);
+        }
+        &-btn {
+            margin-top: 20px;
+            width: 113px;
+            height: 35px;
+            border-radius: 62px;
+            border: 1px solid var(--blue);
+            background-color: rgba($color: #000000, $alpha: 0);
+            font-family: 'Golos Text', sans-serif;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 19.2px;
+            color: var(--blue);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            &:hover {
+                color: var(--white);
+                background-color: var(--blue);
+            }
+        }
+    }
+    &__wrapperMobile {
+        display: none;
+    }
+}
+
+@media (max-width: 1300px) {
+    .slider {
+        &__title {
+            font-size: 51px;
+        }
+        &__block {
+            &-avatar {
+                width: 300px;
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    .slider {
+        &__title {
+            font-size: 51px;
+        }
+        &__block {
+            &-avatar {
+                width: 280px;
+                padding: 0 20px;
+                img {
+                    width: 100%;
+                }
+            }
+            &-title {
+                font-size: 21px;
+            }
+            &-subtitle {
+                font-size: 19px;
+            }
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .slider {
+        &__top {
+            flex-direction: column;
+        }
+        &__title {
+            font-size: 48px;
+            line-height: 56px;
+        }
+        &__counter {
+            margin-top: 15px;
+        }
+        &__block {
+            &-avatar {
+                width: 280px;
+                padding: 0 20px;
+                img {
+                    width: 100%;
+                }
+            }
+            &-title {
+                font-size: 15px;
+            }
+            &-subtitle {
+                font-size: 14px;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .slider {
+        &__title {
+            font-size: 40px;
+            line-height: 53px;
+        }
+        &__block {
+            &-avatar {
+                padding: 0 10px;
+            }
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .slider {
+        padding-top: 115px;
+        padding-bottom: 100px;
+        &__wrapperMobile {
+            display: flex;
+            margin-top: 38px;
+            width: 335px;
+        }
+        &__wrapper {
+            display: none;
+        }
+        &__counter {
+            display: none;
+        }
+        &__title {
+            width: 335px;
+            font-size: 36px;
+            line-height: 39.6px;
+        }
+        &__block {
+            &-avatar {
+                width: 100%;
+                padding: 0px 0px;
+                img {
+                    width: 244px;
+                    height: 244px;
+                }
+            }
+            &-title {
+                font-size: 24px;
+                line-height: 28.8px;
+            }
+            &-subtitle {
+                font-size: 20px;
+                line-height: 24px;
+                margin-top: 10px;
+            }
+        }
+        &__counterMobile {
+            display: flex;
+            width: 130px;
+            margin-top: 40px;
+        }
+    }
+}
